@@ -5,6 +5,11 @@
 .idea/
 *.iml
 .metadata/
+# Eclipse
+.classpath
+.project
+.settings/
+
 # Ignorar pastas de build e dependências locais
 bin/
 target/
