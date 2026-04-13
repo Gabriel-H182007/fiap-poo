@@ -19,9 +19,9 @@ public class TesteSmartwatch {
         smartwatches.add(new GalaxyWatch("Samsung", daniel, 32));
         System.out.println("---🔋 RELATÓRIO DA AUTONOMIA DA BATERIA DOS SMARTWATCHES 🔋---");
         
-        for (Smartwatch watch : smartwatches) {
-        	 System.out.println("Smartwatch: " + watch.getMarca());
-        	 System.out.println(watch.calcularAutonomiaDaBateria());
+        for (Smartwatch smartwatch : smartwatches) {
+        	 System.out.println("Smartwatch: " + smartwatch.getMarca());
+        	 System.out.println(smartwatch.calcularAutonomiaDaBateria());
              System.out.println("----------------------------------------");
  
         }
