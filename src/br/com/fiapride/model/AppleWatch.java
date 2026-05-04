@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class AppleWatch extends Smartwatch{
+public class AppleWatch extends Smartwatch implements Notificavel{
 	private String compatibilidade;
 	
 	public AppleWatch(String marca, Dono usuario, String compatibilidade) {
@@ -29,4 +29,9 @@ public class AppleWatch extends Smartwatch{
 	public String exibirSistemaOperacional() {
         return "Sistema Operacional: " + "watchOS";
     }
+	
+	@Override
+	public void enviarNotificacao(String mensagem) {
+		System.out.println("Smartwatch " + getMarca() + " enviou notificação: " + mensagem);
+	}
 }

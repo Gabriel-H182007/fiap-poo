@@ -1,6 +1,8 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Smartwatch;
+import br.com.fiapride.model.Email;
+import br.com.fiapride.model.Notificavel;
 import br.com.fiapride.model.AppleWatch;
 import br.com.fiapride.model.GalaxyWatch;
 import br.com.fiapride.model.Dono;
@@ -35,6 +37,18 @@ public class TesteSmartwatch {
         System.out.println(applewatch1.exibirSistemaOperacional());      
         System.out.println(galaxywatch1.exibirSistemaOperacional());
 		
+        AppleWatch applewatch2 = new AppleWatch("Apple", gabriel, "iPhone");
+        Email email = new Email("gabriel@email.com");
         
+        Notificavel[] notificaveis = new Notificavel[] {
+                applewatch2,
+                email
+        };
+        
+        System.out.println("=== Enviando Notificação ===");
+        for (Notificavel n : notificaveis) {
+            n.enviarNotificacao("Bom dia!");
+            System.out.println("---");
+        }
 	}
 }
