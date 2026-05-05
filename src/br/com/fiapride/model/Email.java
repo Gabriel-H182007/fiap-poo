@@ -10,6 +10,10 @@ public class Email implements Notificavel {
 
 	@Override
    public void enviarNotificacao(String mensagem) {
-       System.out.println("Email enviado para " + endereco + ": " + mensagem);
+		if (mensagem.length() < Notificavel.TAMANHO_MINIMO_NOTIFICACAO || mensagem.length() > Notificavel.TAMANHO_MAXIMO_NOTIFICACAO) {
+			System.out.println("Erro: Tamanho da notificação inválido");
+			return;
+		}
+        System.out.println("Email enviado para " + endereco + ": " + mensagem);
    }
 }
